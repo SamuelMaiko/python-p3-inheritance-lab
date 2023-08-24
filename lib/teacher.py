@@ -5,6 +5,18 @@ from user import User
 import random
 
 class Teacher(User):
+    def __init__(self,name1, name2):
+        super().__init__(name1,name2)
+        self.knowledge=[
+    "str is a data type in Python",
+    "programming is hard, but it's worth it",
+    "JavaScript async web request",
+    "Python function call definition",
+    "object-oriented teacher instance",
+    "programming computers hacking learning terminal",
+    "pipenv install pipenv shell",
+    "pytest -x flag to fail fast",
+]
 
     def teach(self):
-        pass
+        return self.knowledge[random.randint(0,6)]
